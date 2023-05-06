@@ -65,8 +65,17 @@ public class Car {
         return hasSpoiler;
     }
 
-    public String present(){
-        return null;
+    @Override
+    public String toString() {
+        return "Parameters: \n" +
+                "type: " + type + "\n" +
+                "color: " + color + "\n" +
+                "doorsNumber: " + doorsNumber + "\n" +
+                "fuel: " + fuel + "\n" +
+                "gearbox: " + gearbox + "\n" +
+                "seats: " + seats + "\n" +
+                "has roof: " + hasRoof + "\n" +
+                "has spoiler: " + hasSpoiler;
     }
 
 }

@@ -23,4 +23,11 @@ public class Gearbox {
         return gearsAmount;
     }
 
+    @Override
+    public String toString() {
+        return "Gearbox{" +
+                "type: " + type +
+                ", gearsAmount: " + gearsAmount +
+                '}';
+    }
 }

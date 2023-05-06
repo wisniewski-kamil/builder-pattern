@@ -59,7 +59,9 @@ public class Main {
         System.out.println("+-------------------------------+");
         System.out.println("|        Y O U R   C A R        |");
         System.out.println("+-------------------------------+");
-        car.present();
+        System.out.println();
+        System.out.println(car);
+        System.out.println();
         System.out.println("Thank you for using car builder");
         System.out.println("Exiting car builder");
 
