@@ -10,8 +10,7 @@ public class Gearbox {
 
     private int gearsAmount;
 
-    public Gearbox(GearboxType type, int gearsAmount) throws InvalidParameterSpecException {
-        validate(gearsAmount);
+    public Gearbox(GearboxType type, int gearsAmount) {
         this.type = type;
         this.gearsAmount = gearsAmount;
     }
@@ -24,9 +23,4 @@ public class Gearbox {
         return gearsAmount;
     }
 
-    private void validate(int gearsAmount) throws InvalidParameterSpecException {
-        if (gearsAmount < 2 || gearsAmount > 10) {
-            throw new InvalidParameterSpecException("The amount of gears should be between 2 and 10");
-        }
-    }
 }
