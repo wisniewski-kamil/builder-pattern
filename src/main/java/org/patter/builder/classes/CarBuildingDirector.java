@@ -12,7 +12,11 @@ import java.util.stream.Collectors;
 
 public class CarBuildingDirector {
 
-    private Scanner sc = new Scanner(System.in);
+    private final Scanner sc;
+
+    public CarBuildingDirector(Scanner sc) {
+        this.sc = sc;
+    }
 
     public Car buildCustomCar() {
         CarBuilder builder = new CarBuilder();
@@ -81,7 +85,7 @@ public class CarBuildingDirector {
         System.out.println("What type of car would you like? (CITY/SPORT/TRUCK):");
         builder.type(
                 CarType.valueOf(
-                        InputReader.readStringFromList(sc, Arrays.stream(CarType.values()).map(Enum::name).collect(Collectors.toList()))
+                        InputReader.readStringFromList(sc, Arrays.stream(CarType.values()).map(Enum::name).collect(Collectors.toList())).toUpperCase()
                 )
         );
     }
@@ -90,7 +94,7 @@ public class CarBuildingDirector {
         System.out.println("What color your car should be? (BLACK/BLUE/GREEN/RED/SILVER/WHITE/YELLOW):");
         builder.color(
                 CarColor.valueOf(
-                        InputReader.readStringFromList(sc, Arrays.stream(CarColor.values()).map(Enum::name).collect(Collectors.toList()))
+                        InputReader.readStringFromList(sc, Arrays.stream(CarColor.values()).map(Enum::name).collect(Collectors.toList())).toUpperCase()
                 )
         );
     }
@@ -106,7 +110,7 @@ public class CarBuildingDirector {
         System.out.println("What fuel should your car run on? (DIESEL/ELECTRIC/PETROL):");
         builder.fuel(
                 FuelType.valueOf(
-                        InputReader.readStringFromList(sc, Arrays.stream(FuelType.values()).map(Enum::name).collect(Collectors.toList()))
+                        InputReader.readStringFromList(sc, Arrays.stream(FuelType.values()).map(Enum::name).collect(Collectors.toList())).toUpperCase()
                 )
         );
     }
@@ -114,7 +118,7 @@ public class CarBuildingDirector {
     private void buildGearbox(CarBuilder builder, Scanner sc) {
         System.out.println("What type of gearbox your car should have? (AUTOMATIC/MANUAL):");
         GearboxType gearboxType = GearboxType.valueOf(
-                InputReader.readStringFromList(sc, Arrays.stream(GearboxType.values()).map(Enum::name).collect(Collectors.toList()))
+                InputReader.readStringFromList(sc, Arrays.stream(GearboxType.values()).map(Enum::name).collect(Collectors.toList())).toUpperCase()
         );
         System.out.println("How many gears your car should have? (between 2 and 10):");
         int gearsAmount = InputReader.readIntFromList(sc, List.of(2, 3, 4, 5, 6, 7, 8, 9, 10));
