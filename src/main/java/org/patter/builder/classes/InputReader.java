@@ -13,7 +13,7 @@ public class InputReader {
             System.out.println("Input should be one word string, try again:");
             answer = sc.nextLine();
         }
-        return answer;
+        return answer.trim();
     }
 
     public static String readStringFromList(Scanner sc, List<String> values) {
@@ -36,6 +36,6 @@ public class InputReader {
 
     public static boolean readBoolean(Scanner sc) {
         List<String> values = List.of("true", "false");
-        return Boolean.getBoolean(readStringFromList(sc, values));
+        return Boolean.parseBoolean(readStringFromList(sc, values));
     }
 }
