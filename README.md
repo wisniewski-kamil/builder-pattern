@@ -10,20 +10,20 @@ Struktura programu składa dzieli się na 3 główne elementy:
 * klasy obiektów oraz działania programu
 * klasy typów danych (Enumy)
 
-W testy zostału zaopatrzone klasy drugiego rodzaju, czyli obiektów i działania programu
+W testy zostały zaopatrzone klasy drugiego rodzaju, czyli obiektów i działania programu
 
 ## Schemat działania programu
 
-Po uruchomieniu klasa Main wyświetla tekstowy interfejs programu razem z kilkoma opcjami do wyboru. Po wybraniu opcji innej niż "wyjście" Main wywołuje odpowiednią metodę z klasy CarBuildingDirector która odpowiada za przeprowadzenie procesu konfiguracji posługując się builderem samochodu zaimplementowanego w klasie CarBuilder. Wyświetlane są w konsoli pytania o preferencje użytkownika, a zadaniem użytkownika jest wpisanie swojej preferencji. CarBuildingDirector zbiera te odpowiedzi używając metod statycznych z klasy InputReader które zbierają odpowiedzi użytkownika ze standardowego wejścia, przetwarzają je na odpowiedni typ oraz powtarzają proces jeśli użytkownik popełnił błąd.
+Po uruchomieniu klasa Main wyświetla tekstowy interfejs programu razem z kilkoma opcjami do wyboru. Po wybraniu opcji innej niż "wyjście" Main wywołuje odpowiednią metodę z klasy CarBuildingDirector która odpowiada za przeprowadzenie procesu konfiguracji posługując się builderem samochodu zaimplementowanym w klasie CarBuilder. Wyświetlane są w konsoli pytania o preferencje użytkownika, a zadaniem użytkownika jest wpisanie swojej preferencji. CarBuildingDirector zbiera te odpowiedzi używając metod statycznych z klasy InputReader które zbierają odpowiedzi użytkownika ze standardowego wejścia, przetwarzają je na odpowiedni typ oraz powtarzają proces jeśli użytkownik popełnił błąd.
 Po przejściu procesu kofiguracji przy użyciu CarBuilder'a budowany jest obiekt klasy Car i gotowa konfiguracja prezentowana jest w formie tekstowej używając metody toString z klasy Car oraz pośrednio także toString z klasy GearBox.
 
 ## Scenariusze testów
 
-Scenariusze testów są w tym przypadku bardzo proste ponieważ do przetestowania tego typu aplikacji wystarczają testy jednostkowe. Testy zakłądają takie sceriusze jak sprawdzenie poprawności oczekiwanego wyniku w zalezności od różnych czynników takich jak np. popełnienie błędu przez użytkownika i konieczność ponownego wpisaniu preferencji.
+Scenariusze testów są w tym przypadku bardzo proste ponieważ do przetestowania tego typu aplikacji wystarczają testy jednostkowe. Testy zakładają takie sceriusze jak sprawdzenie poprawności oczekiwanego wyniku w zależności od różnych czynników takich jak np. popełnienie błędu przez użytkownika i konieczność ponownego wpisaniu preferencji, albo obłożenie danych wejściowych pustymi znakami.
 
 ## Wykorzystane narzędzie i biblioteki
 
-Do samego napisania programu oraz testów został użyty program IntelliJ Community Edition w wersji 2023.1.1 z pomocą Maven'a, natomiast język Java był w wersji 20. 
+Do samego napisania programu oraz testów został użyty program IntelliJ Community Edition w wersji 2023.1.1 z pomocą Maven'a, oraz język Java w wersji 20. 
 Do napisania testów użyłem biblioteki JUnit w wersji 4.13.
 
 ## Problemy i ich rozwiązania
