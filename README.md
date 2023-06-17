@@ -1,3 +1,15 @@
+# Wzorce projektowe
+
+Na zaliczenie przedmiotu Wzorce projektowe postawnoiwłem zaimplementować wzorzec "builder" z użyciem języka Java. Jako przykład zastosowania wybrałem program do konfiguracji samochodów.
+Struktura programu składa dzieli się na 3 główne elementy:
+* klasa Main służąca do wypisania tekstowego interfejsu użytkownika oraz uruchomienia procesu konfiguracji samochodu
+* klasy obiektów oraz działania programu
+* klasy typów danych (Enumy)
+
+## Schemat działania programu
+
+Po uruchomieniu klasa Main wyświetla tekstowy interfejs programu razem z kilkoma opcjami do wyboru. Po wybraniu opcji innej niż "wyjście" Main wywołuje odpowiednią metodę z klasy CarBuildingDirector która odpowiada za przeprowadzenie procesu konfiguracji posługując się builderem samochodu zaimplementowanym w klasie CarBuilder. Wyświetlane są w konsoli pytania o preferencje użytkownika, a zadaniem użytkownika jest wpisanie swojej preferencji. CarBuildingDirector zbiera te odpowiedzi używając metod statycznych z klasy InputReader które zbierają odpowiedzi użytkownika ze standardowego wejścia, przetwarzają je na odpowiedni typ oraz powtarzają proces jeśli użytkownik popełnił błąd.
+Po przejściu procesu kofiguracji przy użyciu CarBuilder'a budowany jest obiekt klasy Car i gotowa konfiguracja prezentowana jest w formie tekstowej używając metody toString z klasy Car oraz pośrednio także toString z klasy GearBox.
 
 # Programowanie zaawansowane - Testy
 
@@ -11,11 +23,6 @@ Struktura programu składa dzieli się na 3 główne elementy:
 * klasy typów danych (Enumy)
 
 W testy zostały zaopatrzone klasy drugiego rodzaju, czyli obiektów i działania programu
-
-## Schemat działania programu
-
-Po uruchomieniu klasa Main wyświetla tekstowy interfejs programu razem z kilkoma opcjami do wyboru. Po wybraniu opcji innej niż "wyjście" Main wywołuje odpowiednią metodę z klasy CarBuildingDirector która odpowiada za przeprowadzenie procesu konfiguracji posługując się builderem samochodu zaimplementowanym w klasie CarBuilder. Wyświetlane są w konsoli pytania o preferencje użytkownika, a zadaniem użytkownika jest wpisanie swojej preferencji. CarBuildingDirector zbiera te odpowiedzi używając metod statycznych z klasy InputReader które zbierają odpowiedzi użytkownika ze standardowego wejścia, przetwarzają je na odpowiedni typ oraz powtarzają proces jeśli użytkownik popełnił błąd.
-Po przejściu procesu kofiguracji przy użyciu CarBuilder'a budowany jest obiekt klasy Car i gotowa konfiguracja prezentowana jest w formie tekstowej używając metody toString z klasy Car oraz pośrednio także toString z klasy GearBox.
 
 ## Scenariusze testów
 
